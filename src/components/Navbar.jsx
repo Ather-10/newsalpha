@@ -17,13 +17,13 @@ const Navbar = () => {
                   <Link className="nav-item">
                     <a className="nav-Linknk active" aria-current="page" to="/">Home</a>
                   </Link>
-                  <Link className="nav-item"> <a className="nav-Linknk" to="business"> Business</a> </Link>
-                  <Link className="nav-item"> <a className="nav-Linknk" to="entertainment">Entertainment</a> </Link>
-                  <Link className="nav-item"> <a className="nav-Linknk" to="general"> General</a> </Link>
-                  <Link className="nav-item"> <a className="nav-Linknk" to="health"> Health</a> </Link>
-                  <Link className="nav-item"> <a className="nav-Linknk" to="science"> Science</a> </Link>
-                  <Link className="nav-item"> <a className="nav-Linknk" to="sports"> Sports</a> </Link>
-                  <Link className="nav-item"> <a className="nav-Linknk" to=" technology"> Technology</a> </Link>       
+                  <Link className="nav-item"> <a className="nav-Link" to="business"> Business</a> </Link>
+                  <Link className="nav-item"> <a className="nav-Link" to="entertainment">Entertainment</a> </Link>
+                  <Link className="nav-item"> <a className="nav-Link" to="general"> General</a> </Link>
+                  <Link className="nav-item"> <a className="nav-Link" to="health"> Health</a> </Link>
+                  <Link className="nav-item"> <a className="nav-Link" to="science"> Science</a> </Link>
+                  <Link className="nav-item"> <a className="nav-Link" to="sports"> Sports</a> </Link>
+                  <Link className="nav-item"> <a className="nav-Link" to=" technology"> Technology</a> </Link>       
                 </ul>
               </div>
             </div>
