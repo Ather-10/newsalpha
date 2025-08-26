@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => { 
 
@@ -14,16 +14,16 @@ const Navbar = () => {
                     </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                  <Link className="nav-item">
-                    <a className="nav-Linknk active" aria-current="page" to="/">Home</a>
-                  </Link>
-                  <Link className="nav-item"> <a className="nav-Link" to="business"> Business</a> </Link>
-                  <Link className="nav-item"> <a className="nav-Link" to="entertainment">Entertainment</a> </Link>
-                  <Link className="nav-item"> <a className="nav-Link" to="general"> General</a> </Link>
-                  <Link className="nav-item"> <a className="nav-Link" to="health"> Health</a> </Link>
-                  <Link className="nav-item"> <a className="nav-Link" to="science"> Science</a> </Link>
-                  <Link className="nav-item"> <a className="nav-Link" to="sports"> Sports</a> </Link>
-                  <Link className="nav-item"> <a className="nav-Link" to=" technology"> Technology</a> </Link>       
+                 <NavLink className="nav-item">
+                    <a className="nav-link active" aria-current="page" to="/">Home</a>
+                  </NavLink>
+                 <NavLink className="nav-item"> <a className="nav-link" to="business"> Business</a> </NavLink>
+                 <NavLink className="nav-item"> <a className="nav-link" to="entertainment">Entertainment</a> </NavLink>
+                 <NavLink className="nav-item"> <a className="nav-link" to="general"> General</a> </NavLink>
+                 <NavLink className="nav-item"> <a className="nav-link" to="health"> Health</a> </NavLink>
+                 <NavLink className="nav-item"> <a className="nav-link" to="science"> Science</a> </NavLink>
+                 <NavLink className="nav-item"> <a className="nav-link" to="sports"> Sports</a> </NavLink>
+                 <NavLink className="nav-item"> <a className="nav-link" to=" technology"> Technology</a> </NavLink>       
                 </ul>
               </div>
             </div>
