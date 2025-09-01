@@ -42,56 +42,56 @@ const News = (props) => {
 
     },[])
 
-   const handlenextclick = async () => {
-    if (
-      page + 1 >
-      Math.ceil(totalResults / props.pageSize)
-    ) {
-    } else {
-      let url = `https://newsapi.org/v2/top-headlines?country=${
-        props.country
-      }&category=${
-        props.category
-      }&apiKey=${props.apikey}&page=${
-        page + 1
-      }&pageSize=${props.pageSize}`;
-      setloading(true)
-      setpage(page + 1)
-      // Fetch the next page of articles
-      let data = await fetch(url);
-      let parsedData = await data.json();
-      // console.log(parsedData);
-      setarticles( parsedData.articles)
-      setloading(false)
-    }
-    // This is where you would typically fetch the next page of data from an API
-    // For now, we are using the static articles array
-  };
-   const  handleprevclick = async () => {
-    let url = `https://newsapi.org/v2/top-headlines?country=${
-      props.country
-    }&category=${
-      props.category
-    }&apiKey=${props.apikey}&page=${
-      page - 1
-    }&pageSize=${props.pageSize}`;
-    setloading(true)
-    setpage(page -1)
-    // Fetch the previous page of articles
-    if (page <= 1) {
-      setpage(1)
-      return;
-    }
-    setpage(page -1)
-    // This is where you would typically fetch the previous page of data from an API
+  //  const handlenextclick = async () => {
+  //   if (
+  //     page + 1 >
+  //     Math.ceil(totalResults / props.pageSize)
+  //   ) {
+  //   } else {
+  //     let url = `https://newsapi.org/v2/top-headlines?country=${
+  //       props.country
+  //     }&category=${
+  //       props.category
+  //     }&apiKey=${props.apikey}&page=${
+  //       page + 1
+  //     }&pageSize=${props.pageSize}`;
+  //     setloading(true)
+  //     setpage(page + 1)
+  //     // Fetch the next page of articles
+  //     let data = await fetch(url);
+  //     let parsedData = await data.json();
+  //     // console.log(parsedData);
+  //     setarticles( parsedData.articles)
+  //     setloading(false)
+  //   }
+  //   // This is where you would typically fetch the next page of data from an API
+  //   // For now, we are using the static articles array
+  // };
+  //  const  handleprevclick = async () => {
+  //   let url = `https://newsapi.org/v2/top-headlines?country=${
+  //     props.country
+  //   }&category=${
+  //     props.category
+  //   }&apiKey=${props.apikey}&page=${
+  //     page - 1
+  //   }&pageSize=${props.pageSize}`;
+  //   setloading(true)
+  //   setpage(page -1)
+  //   // Fetch the previous page of articles
+  //   if (page <= 1) {
+  //     setpage(1)
+  //     return;
+  //   }
+  //   setpage(page -1)
+  //   // This is where you would typically fetch the previous page of data from an API
 
-    let data = await fetch(url);
-    let parsedData = await data.json();
-    // console.log(parsedData);
-    setarticles(parsedData.articles)
-    setloading(false)
+  //   let data = await fetch(url);
+  //   let parsedData = await data.json();
+  //   // console.log(parsedData);
+  //   setarticles(parsedData.articles)
+  //   setloading(false)
    
-  };
+  // };
 
    const fetchMoreData = async () => {
     let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apikey}&page=${page + 1}&pageSize=${props.pageSize}`;
@@ -110,7 +110,7 @@ const News = (props) => {
       <>
       {/* <div className="container my-3"> */}
         <h1 className="text-center " style={{ margin: "35px 0",  marginTop:"90px"}}>
-          News - <span className="bg-danger text-white p-1 rounded-3"> Top</span> {Captelizeheadline( props.category)} Headlines
+          News - <span className="bg-danger text-white p-1 rounded-3"> Top</span> {Captelizeheadline(props.category)} Headlines
         </h1>
         {loading && <Spinner />}
         <InfiniteScroll

@@ -1,5 +1,3 @@
-import './App.css'
-
 import React, { useState} from 'react'
 import Navbar from './components/Navbar'
 import News from './components/News'
@@ -9,10 +7,9 @@ import LoadingBar from "react-top-loading-bar";
 
 
 const App =() => {
-
-  // const apikey = import.meta.env.VITE_NEWS_API_KEY;
-  const apikey ="8452e1d5746147eeb3073a280382da28";
-;
+ const apikey = import.meta.env.VITE_NEWS_API_KEY;
+//  const apikey ="8452e1d5746147eeb3073a280382da28";
+// ;
   const [progress, setProgress] = useState(0)
  
     return (  
